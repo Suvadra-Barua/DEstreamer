@@ -26,11 +26,6 @@ contract MyDEsTube is
         _grantRole(MINTER_ROLE, msg.sender);
     }
 
-  
-    function unpause() public onlyRole(PAUSER_ROLE) {
-        _unpause();
-    }
-
     function safeMint(address to, string memory uri)
         public
         onlyRole(MINTER_ROLE)
